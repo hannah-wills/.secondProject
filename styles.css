@@ -1,0 +1,104 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.btn-primary {
+  background-color: #e0a8ce;
+  border-color: #e0a8ce;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #eab6d9;
+  color: #fff;
+  font-size: 30px;
+}
+
+nav span {
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+.difficulty {
+  text-align: center;
+}
+
+.difficulty-buttons {
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.easy-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.intermediate-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.difficult-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.py-5 {
+  margin-top: 1;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}

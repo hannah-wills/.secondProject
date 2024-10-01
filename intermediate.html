@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+    <nav>
+      <span>Quiz</span>
+      <ul>
+        <li><a href="howTo.html">How to</a></li>
+        <li><a href="easy.html">Easy</a></li>
+        <li><a href="intermediate.html">Intermediate</a></li>
+        <li><a href="difficult.html">Difficult</a></li>
+      </ul>
+    </nav>
+
+    <div class="intermediate-title">
+      <img
+        src="https://i.postimg.cc/vTq4Z2jK/Screenshot-11-Photoroom.png"
+        alt="Intermediate"
+        width="300"
+        height="100"
+      />
+    </div>
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <p class="lead">Test your knowledge!</p>
+        </div>
+
+        <div class="row g-5">
+          <div class="col-md-12">
+            <h4 class="mb-3">Questions</h4>
+            <form id="quiz-form">
+              <div class="form-group">
+                <label for="question1text"
+                  >1. How many valves does the heart have?</label
+                >
+                <div>
+                  <input
+                    type="text"
+                    name="question1text"
+                    id="question1text"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <br />
+
+              <div class="form-group">
+                <label for="question2"
+                  >2. Which metal has the chemical symbol "Fe"?</label
+                >
+                <div>
+                  <input
+                    type="radio"
+                    name="question2intermediate"
+                    value="A"
+                    id="q2a"
+                  />
+                  <label for="q2a">Iron</label><br />
+                  <input
+                    type="radio"
+                    name="question2intermediate"
+                    value="B"
+                    id="q2b"
+                  />
+                  <label for="q2b">Copper</label><br />
+                  <input
+                    type="radio"
+                    name="question2intermediate"
+                    value="C"
+                    id="q2c"
+                  />
+                  <label for="q2c">Zinc</label>
+                </div>
+              </div>
+              <br />
+
+              <div class="form-group">
+                <label for="question3"
+                  >3. Which planet is the hottest in the solar system?</label
+                >
+                <div>
+                  <input
+                    type="radio"
+                    name="question3intermediate"
+                    value="A"
+                    id="q3a"
+                  />
+                  <label for="q3a">Neptune</label><br />
+                  <input
+                    type="radio"
+                    name="question3intermediate"
+                    value="B"
+                    id="q3b"
+                  />
+                  <label for="q3b">Venus</label><br />
+                  <input
+                    type="radio"
+                    name="question3intermediate"
+                    value="C"
+                    id="q3c"
+                  />
+                  <label for="q3c">Mercury</label>
+                </div>
+              </div>
+              <br />
+
+              <div class="form-group">
+                <label for="question4"
+                  >4. Where is Angel Falls, the world's largest waterfall,
+                  located?</label
+                >
+                <div>
+                  <input
+                    type="radio"
+                    name="question4intermediate"
+                    value="A"
+                    id="q4a"
+                  />
+                  <label for="q4a">Venezuela</label><br />
+                  <input
+                    type="radio"
+                    name="question4intermediate"
+                    value="B"
+                    id="q4b"
+                  />
+                  <label for="q4b">Belgium</label><br />
+                  <input
+                    type="radio"
+                    name="question4intermediate"
+                    value="C"
+                    id="q4c"
+                  />
+                  <label for="q4c">Argentina</label>
+                </div>
+              </div>
+              <br />
+
+              <div class="form-group">
+                <label for="question5"
+                  >5. Emerald is the traditional birthstone associated with
+                  which month of the year?</label
+                >
+                <div>
+                  <input
+                    type="radio"
+                    name="question5intermediate"
+                    value="A"
+                    id="q5a"
+                  />
+                  <label for="q5a">August</label><br />
+                  <input
+                    type="radio"
+                    name="question5intermediate"
+                    value="B"
+                    id="q5b"
+                  />
+                  <label for="q5b">May</label><br />
+                  <input
+                    type="radio"
+                    name="question5intermediate"
+                    value="C"
+                    id="q5c"
+                  />
+                  <label for="q5c">October</label>
+                </div>
+              </div>
+              <br />
+
+              <div class="form-group">
+                <label for="question6"
+                  >6. How many of Henry VIII's wives were named
+                  Catherine?</label
+                >
+                <div>
+                  <input
+                    type="radio"
+                    name="question6intermediate"
+                    value="A"
+                    id="q6a"
+                  />
+                  <label for="q6a">Two</label><br />
+                  <input
+                    type="radio"
+                    name="question6intermediate"
+                    value="B"
+                    id="q6b"
+                  />
+                  <label for="q6b">Four</label><br />
+                  <input
+                    type="radio"
+                    name="question6intermediate"
+                    value="C"
+                    id="q6c"
+                  />
+                  <label for="q6c">Three</label>
+                </div>
+              </div>
+
+              <hr class="my-4" />
+              <button class="w-100 btn btn-primary btn-lg" type="submit">
+                Submit
+              </button>
+            </form>
+            <!-- Close the form here -->
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="intermediate.js"></script>
+  </body>
+</html>
