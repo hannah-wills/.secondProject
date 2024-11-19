@@ -1,3 +1,18 @@
+const timerElement = document.getElementById("time-left");
+    let timeLeft = 15;
+  
+    // Timer interval (updates every second)
+    const timerInterval = setInterval(function () {
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval); // Stop the timer when it hits 0
+        alert("Time's up!");
+        document.getElementById("quiz-form").submit(); // Submit the form when time is up
+      } else {
+        timerElement.textContent = timeLeft; // Update the timer display
+        timeLeft--;
+      }
+    }, 1000);
+
 document.getElementById('quiz-form').addEventListener('submit', function(event) {
     event.preventDefault();
 

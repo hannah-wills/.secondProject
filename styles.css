@@ -157,3 +157,34 @@ button:hover {
   background: #c187af;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+#timer {
+  background-color: #f8d7da; /* Light red background */
+  color: #272727;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* Increased width for the box */
+  margin: 20px auto;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid #f5c6cb;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align the text */
+}
+
+.timer-text {
+  font-size: 36px; /* Larger text for timer */
+  color: #dc3545; /* Default red color */
+  font-family: "Arial", sans-serif;
+  transition: color 1s ease-in-out; /* Smooth color transition */
+}
+
+/* When the time is running low (below 10 seconds) */
+#timer.low-time .timer-text {
+  color: #ffc107; /* Yellow color for warning */
+}
+
+/* When time is up */
+#timer.time-up .timer-text {
+  color: #28a745; /* Green color when time is up */
+}
