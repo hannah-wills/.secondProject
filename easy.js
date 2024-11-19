@@ -1,48 +1,62 @@
 document.getElementById('quiz-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    
+
     let score = 0;
     let totalQuestions = 6;
 
-    // Question 1 Easy
-    const q1Answer = document.querySelector('input[name="question1"]:checked');
-    if (q1Answer && q1Answer.value === 'A') {
-        score++;
-    }
+    // Array to store the correct answers
+    const correctAnswers = {
+        question1: 'A',
+        question2: 'B',
+        question3: 'B',
+        question4: 'A',
+        question5: 'A',
+        question6: 'B'
+    };
 
-    // Question 2 Easy
-    const q2Answer = document.querySelector('input[name="question2"]:checked');
-    if (q2Answer && q2Answer.value === 'B') {
-        score++;
-    }
+    // Array to store incorrect answers for feedback
+    let feedback = [];
 
-    // Question 3 Easy
-    const q3Answer = document.querySelector('input[name="question3"]:checked');
-    if (q3Answer && q3Answer.value === 'B') {
-        score++;
-    }
-
-    // Question 4 Easy
-    const q4Answer = document.querySelector('input[name="question4"]:checked');
-    if (q4Answer && q4Answer.value === 'A') {
-        score++;
-    }
-
-    // Question 5 Easy
-    const q5Answer = document.querySelector('input[name="question5"]:checked');
-    if (q5Answer && q5Answer.value === 'A') {
-        score++;
-    }
-
-    // Question 6 Easy
-    const q6Answer = document.querySelector('input[name="question6"]:checked');
-    if (q6Answer && q6Answer.value === 'B') {
-        score++;
+    // Loop through each question
+    for (let i = 1; i <= totalQuestions; i++) {
+        const question = `question${i}`;
+        const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        
+        if (selectedAnswer) {
+            if (selectedAnswer.value === correctAnswers[question]) {
+                score++;
+            } else {
+                feedback.push({
+                    question: `Question ${i}`, // Format the question label
+                    selected: selectedAnswer.value,
+                    correct: correctAnswers[question]
+                });
+            }
+        } else {
+            feedback.push({
+                question: `Question ${i}`, // Format the question label
+                selected: 'No answer selected',
+                correct: correctAnswers[question]
+            });
+        }
     }
 
     // Calculate percentage
     let percentage = (score / totalQuestions) * 100;
 
-    // Display result
-    alert('Your score is: ' + score + '/' + totalQuestions + ' (' + percentage + '%)');
+    // Display score
+    let resultMessage = `Your score is: ${score}/${totalQuestions} (${percentage}%)\n\n`;
+
+    // Display detailed feedback for incorrect answers
+    if (feedback.length > 0) {
+        resultMessage += "Review your answers:\n";
+        feedback.forEach(item => {
+            resultMessage += `- ${item.question}: Your answer was "${item.selected}". Correct answer: "${item.correct}".\n`;
+        });
+    } else {
+        resultMessage += "Great job! All answers are correct.";
+    }
+
+    // Show result
+    alert(resultMessage);
 });
