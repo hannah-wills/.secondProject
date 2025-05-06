@@ -1,17 +1,29 @@
-const timerElement = document.getElementById("time-left");
-    let timeLeft = 15;
-  
-    // Timer interval (updates every second)
-    const timerInterval = setInterval(function () {
-      if (timeLeft <= 0) {
-        clearInterval(timerInterval); // Stop the timer when it hits 0
-        alert("Time's up!");
-        document.getElementById("quiz-form").submit(); // Submit the form when time is up
-      } else {
-        timerElement.textContent = timeLeft; // Update the timer display
-        timeLeft--;
-      }
-    }, 1000);
+// Declare variables to hold references to the timer and start button
+let timerInterval;
+let timeRemaining = 60; // Set the timer duration (in seconds)
+const timerElement = document.getElementById('time'); // Timer display element
+const startButton = document.getElementById('startButton'); // Start button
+
+// Function to start the timer
+function startTimer() {
+  startButton.disabled = true; // Disable the start button when the timer starts
+
+  // Start the timer countdown
+  timerInterval = setInterval(function () {
+    if (timeRemaining <= 0) {
+      clearInterval(timerInterval); // Stop the timer when it reaches zero
+      timerElement.textContent = "Time's up!"; // Only display "Time's up!" when timer ends
+    } else {
+      let minutes = Math.floor(timeRemaining / 60);
+      let seconds = timeRemaining % 60;
+      timerElement.textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`; // Update timer display
+      timeRemaining--; // Decrement the timer
+    }
+  }, 1000);
+}
+
+// Event listener for the start button
+startButton.addEventListener('click', startTimer);
 
 document.getElementById('quiz-form').addEventListener('submit', function(event) {
     event.preventDefault();

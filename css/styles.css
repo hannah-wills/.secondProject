@@ -188,3 +188,16 @@ button:hover {
 #timer.time-up .timer-text {
   color: #28a745; /* Green color when time is up */
 }
+
+/* CSS to center the start button */
+.center-button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 5vh; /* Take up the full height of the viewport */
+  width: 100%; /* Ensure the container takes up full width */
+}
+
+#startButton {
+  font-size: 20px;
+}
