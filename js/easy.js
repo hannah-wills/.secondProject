@@ -74,7 +74,7 @@ nextButton.addEventListener("click", () => {
   }
 });
 
-// Submit and score
+// Handle submit and leaderboard
 document.getElementById("quiz-form").addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -107,9 +107,65 @@ document.getElementById("quiz-form").addEventListener("submit", function (event)
 
   questionContainer.innerHTML = resultsHTML;
   submitButton.style.display = "none";
+
+  const playerName = prompt("Enter your name for the leaderboard:");
+  if (playerName) {
+    const leaderboard = JSON.parse(localStorage.getItem("leaderboard_easy")) || [];
+    leaderboard.push({
+      name: playerName,
+      score: score,
+      total: fetchedQuestions.length,
+      percent: percentage
+    });
+
+    leaderboard.sort((a, b) => b.score - a.score);
+    localStorage.setItem("leaderboard_easy", JSON.stringify(leaderboard));
+  }
+
+  showQuizCompleteModal();
 });
 
-// ✅ Start the quiz when the Start button is clicked
+// Leaderboard generator
+function generateLeaderboardHTML() {
+  const leaderboard = JSON.parse(localStorage.getItem("leaderboard_easy")) || [];
+  let html = `<div class="leaderboard-wrapper"><h3>Leaderboard</h3><ol>`;
+
+  leaderboard.slice(0, 10).forEach((entry, index) => {
+    let icon = "";
+    if (index === 0) icon = "🥇 ";
+    else if (index === 1) icon = "🥈 ";
+    else if (index === 2) icon = "🥉 ";
+
+    html += `<li>${icon}${entry.name}: ${entry.score}/${entry.total} (${entry.percent.toFixed(1)}%)</li>`;
+  });
+
+  html += `</ol></div>`;
+  return html;
+}
+
+// Show quiz complete modal
+function showQuizCompleteModal() {
+  const path = window.location.pathname;
+  const container = document.getElementById("quizCompleteButtons");
+  const modal = document.getElementById("quizCompleteContent");
+
+  container.innerHTML = "";
+  modal.querySelectorAll(".leaderboard-wrapper")?.forEach(el => el.remove());
+
+  const tryAgainBtn = `<button onclick="window.location.reload();">🔁 Try Again</button>`;
+  const homeBtn = `<button onclick="window.location.href='index.html';">🏠 Go Home</button>`;
+  const intermediateBtn = `<button onclick="window.location.href='intermediate.html';">🟠 Try Intermediate</button>`;
+  const difficultBtn = `<button onclick="window.location.href='difficult.html';">🔴 Try Difficult</button>`;
+
+  container.innerHTML = `${tryAgainBtn}${intermediateBtn}${difficultBtn}${homeBtn}`;
+
+  const leaderboardHTML = generateLeaderboardHTML();
+  modal.innerHTML += `<div class="leaderboard-wrapper" style="margin-top: 2em;">${leaderboardHTML}</div>`;
+
+  document.getElementById("quizCompleteModal").style.display = "flex";
+}
+
+// Start quiz
 startButton.addEventListener("click", () => {
   startButton.disabled = true;
   loadQuestions();
