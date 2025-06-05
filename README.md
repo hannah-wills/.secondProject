@@ -2,7 +2,7 @@ General Knowledge Quiz
 
 Description
 
-This is a general knowledge quiz application that allows users to test their knowledge at different difficulty levels. The quiz has three difficulty levels: Easy, Intermediate, and Difficult. Users can select a difficulty from the homepage and proceed to answer questions in that difficulty category. The quiz provides immediate feedback on each answer, and users are shown their score at the end of the quiz.
+This is a Video Game Quiz application that allows users to test their knowledge at different difficulty levels. The quiz has three difficulty levels: Easy, Intermediate, and Difficult. Users can select a difficulty from the homepage and proceed to answer questions in that difficulty category. The quiz provides immediate feedback on each answer, and users are shown their score at the end of the quiz.
 
 Features
 

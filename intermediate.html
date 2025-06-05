@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>General Knowledge Quiz</title>
+    <title>Video Game Quiz</title>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Merriweather:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:wght@700&display=swap"
       rel="stylesheet"
     />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body class="bg-light">
     <nav>
-      <span>General Knowledge Quiz</span>
+      <span>Video Game Quiz</span>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="easy.html">Easy</a></li>
@@ -23,50 +29,57 @@
 
     <div class="intermediate-title">
       <img
-        src="https://i.postimg.cc/vTq4Z2jK/Screenshot-11-Photoroom.png"
+        src="assets/images/3.png"
         alt="Intermediate"
-        width="300"
+        width="700"
         height="100"
       />
     </div>
 
-    <div
-      id="timer"
-      style="
-        font-size: 20px;
-        color: #333;
-        text-align: center;
-        margin-bottom: 20px;
-      "
-    >
-      Time Left: <span id="time">60</span>
+    <!-- Timer -->
+    <div class="circular-timer">
+      <svg class="progress-ring" width="120" height="120">
+        <circle
+          class="progress-ring__circle"
+          stroke="#e0a8ce"
+          stroke-width="8"
+          fill="transparent"
+          r="54"
+          cx="60"
+          cy="60"
+        />
+      </svg>
+      <div class="timer-text" id="time">1:20</div>
     </div>
 
-    <div class="center-button-container">
-      <button id="startButton" class="btn btn-success btn-lg">Start</button>
+    <!-- Start button -->
+    <div class="container text-center my-4">
+      <button id="startButton" class="btn btn-outline-pink px-4 py-2">
+        Start
+      </button>
     </div>
 
-    <div class="container">
+    <!-- Centered quiz form -->
+    <div class="container quiz-container my-4">
       <main>
-        <div class="row g-5">
-          <div class="col-md-12">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
             <h4 class="mb-3">Questions</h4>
             <form id="quiz-form">
-              <div id="question-container"></div>
-              <!-- Move buttons outside the container div -->
+              <div id="question-container" class="text-start"></div>
               <button
                 id="nextButton"
-                class="btn btn-primary mt-3"
+                class="btn btn-primary mt-5"
                 type="button"
                 style="display: none"
               >
                 Next
               </button>
               <button
-                class="w-100 btn btn-success btn-lg mt-3"
+                class="btn btn-success btn-lg mt-3 px-5 custom-submit"
                 type="submit"
-                style="display: none"
                 id="submitButton"
+                style="display: none"
               >
                 Submit
               </button>
@@ -74,6 +87,21 @@
           </div>
         </div>
       </main>
+    </div>
+
+    <div id="timesUpModal" class="modal" style="display: none">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4">
+          <h5 class="modal-title mb-3">⏰ Time's Up!</h5>
+          <p>You’ve run out of time. Please try again.</p>
+          <button
+            onclick="window.location.href='index.html'"
+            class="btn btn-primary mt-2"
+          >
+            Return to Home
+          </button>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

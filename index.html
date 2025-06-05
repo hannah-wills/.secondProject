@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>General Knowledge Quiz</title>
+    <title>Video Game Quiz</title>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Merriweather:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
     <nav>
-      <span>General Knowledge Quiz</span>
+      <span>Video Game Quiz</span>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="easy.html">Easy</a></li>
@@ -22,39 +24,48 @@
       </ul>
     </nav>
     <div class="title"><img
-      src="https://i.postimg.cc/vBnMCqLy/Screenshot-9-Photoroom-1.png"
+      src="assets/images/Video Game (1).png"
       alt="Title"
-      width="500"
+      width="600"
+      height="300"
     /></div></body>
 
-    <div class="difficulty"><h2 style="color: rgb(236, 192, 223);">Pick your difficulty setting:</h2></div>
+
+    <div class="difficulty"><h2 style="color: rgb(0, 0, 0);">Pick your difficulty setting:</h2></div>
+
+
     <div class="difficulty-buttons">
-      <button
-        class="btn btn-secondary btn-lg mt-4 mb-5"
-        style="font-size: 1.25rem; padding: 10px 20px; border: 2px solid #ffffff; background-color: #eeb8e9; color: rgb(255, 255, 255);"
-        onclick="window.location.href='easy.html'"
-      >
-        Easy
-      </button>
-      <br />
-      <br />
-      <button
-        class="btn btn-secondary btn-lg mt-4 mb-5"
-        style="font-size: 1.25rem; padding: 10px 20px; border: 2px solid #ffffff; background-color: #eeb8e9; color: rgb(255, 255, 255);"
-        onclick="window.location.href='intermediate.html'"
-      >
-        Intermediate
-      </button>
-      <br />
-      <br />
-      <button
-        class="btn btn-secondary btn-lg mt-4 mb-5"
-        style="font-size: 1.25rem; padding: 10px 20px; border: 2px solid #ffffff; background-color: #eeb8e9; color: rgb(255, 255, 255);"
-        onclick="window.location.href='difficult.html'"
-      >
-        Difficult
-      </button>
+      <button class="btn difficulty-btn" onclick="window.location.href='easy.html'">Easy</button>
+      <button class="btn difficulty-btn" onclick="window.location.href='intermediate.html'">Intermediate</button>
+      <button class="btn difficulty-btn" onclick="window.location.href='difficult.html'">Difficult</button>
     </div>
+
+    <div class="container my-5">
+      <h2 class="mb-4">How to Take the Quiz:</h2>
+      <p>Welcome to the Video Game Quiz! Follow these simple steps to get started:</p>
+        <hr>
+        <h4 class="mt-4">📌 1. Choose Your Difficulty</h4>
+      <p>Each level offers a different challenge — pick what suits you best!</p>
+    
+      <h4 class="mt-4">▶️ 2. Start the Quiz</h4>
+      <p>Click the <strong>Start</strong> button to begin. A timer will start counting down for the Intermediate/Difficult options — make sure to answer before time runs out!</p>
+      <p>The quiz may include multiple choice or true/false answers depending on the level.</p>
+    
+      <h4 class="mt-4">⏱️ 3. Answer the Questions</h4>
+      <p>For <strong>multiple choice</strong> questions, click the option you believe is correct.</p>
+      <p>For <strong>true or false</strong> questions, select whether the answer is true or false.</p>
+      <p>Use the <strong>Next</strong> button to move through the questions. Once you reach the end, the <strong>Submit</strong> button will appear.</p>
+    
+      <h4 class="mt-4">✅ 4. Submit Your Answers</h4>
+      <p>When you're finished, click <strong>Submit</strong>.</p>
+      <p>You’ll immediately see your score and a breakdown of any incorrect answers.</p>
+      <p>Use this feedback to learn and try again if you want to improve your score!</p>
+    
+      <h4 class="mt-4">📝 5. Scoring & Feedback</h4>
+      <p>Your score is based on how many correct answers you provide.</p>
+      <p>All answers are auto-checked.</p>
+    </div>
+    
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
   </body>
