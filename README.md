@@ -23,4 +23,4 @@ I used the [HTML validator](https://validator.w3.org/nu/#textarea) to check my c
 
 Here is an example error I found:
 
-(/assets/images/README/bad-value-error.png)
+![ReadME Error](./assets/images/README/bad-value-error.png)
