@@ -66,7 +66,7 @@ function displayQuestion(index) {
   `;
 }
 
-// Leaderboard generator (used in multiple places)
+// Leaderboard generator
 function generateLeaderboardHTML() {
   const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
   let leaderboardHTML = `<div class="leaderboard-wrapper"><h3>Leaderboard</h3><ol>`;
