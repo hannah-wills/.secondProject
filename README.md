@@ -34,5 +34,3 @@ An example JavaScript error:
 add example css and js error - links in chat
 
 ![CSS Error](./assets/images/README/css-error.PNG)
-
-I fixed these by correcting typos in the code.
