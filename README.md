@@ -6,16 +6,18 @@ This is a Video Game Quiz application that allows users to test their knowledge 
 
 ## Features
 
-Home Page: Choose your quiz difficulty (Easy, Intermediate, Difficult).
-Difficulty Levels: Each difficulty level contains a set of questions with varying levels of difficulty.
-Answer Feedback: After the quiz is completed, the application provides feedback on which questions were answered correctly and which ones were incorrect, showing the correct answer.
-Scoring System: Displays the user’s score as a percentage and the total number of correct answers.
+- Home Page: Choose your quiz difficulty (Easy, Intermediate, Difficult).
+- Difficulty Levels: Each difficulty level contains a set of questions with varying levels of difficulty.
+- Answer Feedback: After the quiz is completed, the application provides feedback on which questions were answered correctly and which ones were incorrect, showing the correct answer.
+- Scoring System: Displays the user’s score as a percentage and the total number of correct answers.
+
+add images of app
 
 ## Technologies Used
 
-HTML: Structure of the webpage and form elements.
-CSS: Styling of the page, buttons, navigation, and layout.
-JavaScript: Functionality for handling quiz answers, scoring, and feedback.
+- HTML: Structure of the webpage and form elements.
+- CSS: Styling of the page, buttons, navigation, and layout.
+- JavaScript: Functionality for handling quiz answers, scoring, and feedback.
 
 ## Validation
 
@@ -24,3 +26,5 @@ I used the [HTML validator](https://validator.w3.org/nu/#textarea) to check my c
 Here is an example error I found:
 
 ![ReadME Error](./assets/images/README/bad-value-error.png)
+
+add example css and js error - links in chat
