@@ -27,4 +27,12 @@ Here is an example error I found:
 
 ![ReadME Error](./assets/images/README/bad-value-error.png)
 
+An example JavaScript error:
+
+![JS Error](./assets/images/README/js-error.PNG)
+
 add example css and js error - links in chat
+
+![CSS Error](./assets/images/README/css-error.PNG)
+
+I fixed these by correcting typos in the code.
